@@ -1,0 +1,271 @@
+/* Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    background-color: #f5f5f5;
+    color: #006400;
+}
+
+/* Estilo del encabezado */
+header {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #006400;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.logo {
+    max-height: 80px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo1 {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: green;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+h3 {
+    margin: 25px 0 15px 0;
+}
+
+h4 {
+    color: #555;
+    margin: 20px 0 15px 0;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #006400;
+    font-size: 12pt;
+    padding: 0.5rem 1rem;
+    border: 1px solid #006400;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #006400;
+    color: white;
+}
+
+/* Contenido principal */
+main {
+    background-color: white;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 12pt;
+}
+
+section {
+    margin: 40px 0;
+}
+
+article {
+    background-color: #f9f9f9;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+}
+
+/* Textos */
+p, ul, li {
+    color: black;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.texto-negro {
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Listas */
+ol {
+    padding-left: 40px;
+    margin: 20px 0;
+}
+
+ol li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Botón regresar */
+.boton-regresar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.boton-regresar:hover {
+    background-color: #45a049;
+}
+
+/* Imágenes */
+.imagen-bienvenida {
+    display: block;
+    margin: 40px auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.imagen-item {
+    flex: 1 1 calc(25% - 32px);
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.imagen-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagen-item figcaption {
+    padding: 10px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 14px;
+}
+
+.imagen-item:hover {
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-top: 2px solid #006400;
+    font-size: 10pt;
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+    .imagen-item {
+        flex: 1 1 calc(25% - 32px);
+    }
+    
+    header h1 {
+        font-size: 28pt;
+    }
+    
+    nav ul li a {
+        font-size: 14pt;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 600px) {
+    .imagen-item {
+        flex: 1 1 calc(33% - 32px);
+    }
+    
+    header h1 {
+        font-size: 24pt;
+    }
+    
+    nav ul li a {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    article {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 599px) {
+    .imagen-item {
+        flex: 1 1 calc(50% - 32px);
+    }
+    
+    header h1 {
+        font-size: 20pt;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 12pt;
+        padding: 0.5rem;
+    }
+}
